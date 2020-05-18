@@ -7,6 +7,9 @@ name = "pypi"
 requests = "*"
 spotipy = "*"
 django = "*"
+black = "*"
+pylint = "*"
+isort = "*"
 
 [dev-packages]
 

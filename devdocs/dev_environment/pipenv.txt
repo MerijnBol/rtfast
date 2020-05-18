@@ -1,0 +1,14 @@
+install pipenv
+
+create project virtual environment:
+pipenv --python 3.8.2
+
+install dependencies from pipfile
+pipenv install 
+
+TODO: set environment variables for these:
+pipenv --py
+pipenv --venv
+which black
+get the python path for you virtual environment. Add this path to .vscode/settings.json.
+pipenv --py
