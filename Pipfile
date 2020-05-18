@@ -10,6 +10,7 @@ django = "*"
 black = "*"
 pylint = "*"
 isort = "*"
+pylint-django = "*"
 
 [dev-packages]
 

@@ -1,0 +1,30 @@
+{% load i18n %}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Spotify Searches</title>
+    <meta name="description" content="Spotify Searches">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="static/stylesheets/main.css">
+
+</head>
+
+<body>
+    <h1>
+        Spotify Searches
+    </h1>
+
+    <ul>
+        {% for i in searches %}
+        <li><a href="{% url 'spotify:search' i.id %}"> {{ i }} </a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

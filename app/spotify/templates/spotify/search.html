@@ -1,0 +1,44 @@
+{% load i18n %}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Spotify Search</title>
+    <meta name="description" content="Spotify Search overview">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="static/stylesheets/main.css">
+
+</head>
+
+<body>
+    <h1>
+        Spotify search: "{{ search }}"
+    </h1>
+    <div>
+        <h2>
+            Playlists
+        </h2>
+        <ul>
+            {% for i in playlists %}
+            <li><a href="{% url 'spotify:playlist' search.id i.id %}">{{ i }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>
+            Tracks
+        </h2>
+        <ul>
+            {% for i in tracks %}
+            <li><a href="{% url 'spotify:track' search.id i.id %}">{{ i }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
