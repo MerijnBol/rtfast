@@ -1,0 +1,1 @@
+git remote add production ssh://git@188.166.103.233/var/deploy_repos/django_app.git/

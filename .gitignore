@@ -1,0 +1,2 @@
+# DB used for testing, doesn't need versioning
+db.sqlite3
