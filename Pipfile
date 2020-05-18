@@ -6,11 +6,11 @@ name = "pypi"
 [packages]
 requests = "*"
 spotipy = "*"
-django = "*"
-black = "*"
+Django = "*"
 pylint = "*"
 isort = "*"
 pylint-django = "*"
+black = "==19.10b0"
 
 [dev-packages]
 
