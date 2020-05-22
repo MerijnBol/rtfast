@@ -1,0 +1,6 @@
+Gunicorn installed inside pipevn
+gunicorn settingsfile is inside source control
+
+start server with:
+gunicorn -c gunicorn_cfg.py app.wsgi
+
