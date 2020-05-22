@@ -12,6 +12,8 @@ DEBUG = True if os.environ["DJANGO_DEBUG"] == "True" else False
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "*.merijnbol.nl"]
 
+SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"
+
 
 # Application definition
 
