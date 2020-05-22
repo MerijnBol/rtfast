@@ -1,2 +1,9 @@
 # DB used for testing, doesn't need versioning
 db.sqlite3
+
+# Static root 
+/app/static
+
+# python interpreter files
+*.pyc
+*.pyo

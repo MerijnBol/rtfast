@@ -11,6 +11,7 @@ pylint = "*"
 isort = "*"
 pylint-django = "*"
 black = "==19.10b0"
+gunicorn = "*"
 
 [dev-packages]
 
