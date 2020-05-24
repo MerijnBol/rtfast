@@ -4,6 +4,9 @@ db.sqlite3
 # Static root 
 /app/static
 
+#pipenv environment variables
+.env
+
 # python interpreter files
 *.pyc
 *.pyo

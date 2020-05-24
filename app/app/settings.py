@@ -7,8 +7,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
-DEBUG = True if os.environ["DJANGO_DEBUG"] == "True" else False
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", default="123456789")
+DEBUG = False if os.getenv("DJANGO_PRODCUTION_SERVER") else True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "*.merijnbol.nl"]
 
