@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", default="123456789")
-DEBUG = True if os.getenv("DJANGO_DEVELOPMENT_SERVER") == "True" else False
+DEBUG = True if os.getenv("DJANGO_PRODUCTION_SERVER") == "False" else False
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "*.merijnbol.nl"]
 
