@@ -1,15 +1,12 @@
 #!/bin/bash
 
-# if gunicorn_PID.txt
-# then
-#     pid = `cat gunicorn_PID.txt`
-#     echo "Killing old process with PID = $pid"
-#     kill $pid
-# fi
+#start virtual environment and cd to project folder.
+cd /srv/django_app/app
+
+#try to kill old process
+pid=`cat gunicorn_pids`
+echo "Killing old process with PID = $pid"
+kill $pid
 
 # start the detached gunicorn process per gunicorn_cfg settings via pipenv.
-cd /srv/django_app/app
-pipenv run gunicorn -D -c gunicorn_cfg.py app.wsgi
-
-# echo $! > gunicorn_PID.txt
-# echo "Started gunicorn server with PID = " $!
+pipenv run gunicorn -D -p gunicorn_pids -c gunicorn_cfg.py app.wsgi
