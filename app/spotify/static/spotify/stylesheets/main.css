@@ -1,0 +1,20 @@
+:root {
+    --text-color: rgb(40, 40, 40);
+    --spotify-green: rgb(30, 215, 96);
+    --broken-white: rgb(233, 224, 210);
+    --black: black;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--broken-white);
+}
+
+body,
+table {
+    color: var(--broken-white);
+}
+
+h1 {
+    color: var(--spotify-green);
+}

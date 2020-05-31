@@ -1,0 +1,52 @@
+{% load i18n static %}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Spot Search Results</title>
+    <meta name="description" content="Spotify Searches">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="{% static 'spotify/stylesheets/main.css' %}">
+
+</head>
+
+<body>
+    <h1>
+        Results
+    </h1>
+
+    <h3> Tracks </h3>
+    <ul>
+        {% for i in tracks %}
+        <li> {{ i.name }} </li>
+        {% endfor %}
+    </ul>
+
+    <h3> Albums </h3>
+    <ul>
+        {% for i in albums %}
+        <li> {{ i.name }} </li>
+        {% endfor %}
+    </ul>
+
+    <h3> Artists </h3>
+    <ul>
+        {% for i in artists %}
+        <li> {{ i.name }} </li>
+        {% endfor %}
+    </ul>
+
+    <h3> Playlists </h3>
+    <ul>
+        {% for i in playlists %}
+        <li> {{ i.name }} </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{% load i18n static %}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Spot Search</title>
+    <meta name="description" content="Spotify Searches">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="{% static 'spotify/stylesheets/main.css' %}">
+
+</head>
+
+<body>
+    <h1>
+        Search spotify
+    </h1>
+
+    <form action="/spotify/results" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <div>
+            <input type="submit" value="Search">
+        </div>
+    </form>
+</body>
+
+</html>
