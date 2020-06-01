@@ -5,8 +5,11 @@ from urllib.parse import quote
 
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Search, Playlist_search, Track_search
+
+# from .models import Search, Playlist_search, Track_search
 from .forms import searchForm
+
+from .views_utils import collect_checkboxes, add_results_to_context
 
 spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 
@@ -40,29 +43,6 @@ def results(request):
     add_results_to_context(context, results)
 
     return render(request, "spotify/results.html", context)
-
-
-def collect_checkboxes(post, check="on"):
-    """
-    Returns a list of all args whos value == bool
-    """
-    l = []
-    for a in post:
-        if post[a] == check:
-            l.append(a)
-    return l
-
-
-def add_results_to_context(context, results):
-    """
-    Returns context appended with all search results
-    """
-    for a in results:
-        # if context[a]:
-        #     next
-        if results[a]:
-            context[a] = results[a]["items"]
-    return context
 
 
 # views for model tree test, not active now.
