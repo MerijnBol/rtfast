@@ -1,6 +1,9 @@
 # DB used for testing, doesn't need versioning
 db.sqlite3
 
+# the virtual environment
+.venv
+
 # Static root 
 /app/static
 

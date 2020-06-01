@@ -1,8 +1,10 @@
 {
-    "python.pythonPath": "/home/merijnbol/.local/share/virtualenvs/sandbox_project-lRa_YkDp/bin/python",
+    // "python.pythonPath": "/home/merijnbol/.local/share/virtualenvs/sandbox_project-lRa_YkDp/bin/python",
+    "python.pythonPath": "$VENV_DIR/bin/python",
     "python.pipenvPath": "/home/merijnbol/.local/share/virtualenvs/sandbox_project-lRa_YkDp",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "/home/merijnbol/.local/share/virtualenvs/sandbox_project-lRa_YkDp/bin/black",
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
     // "python.linting.pylintArgs": ["--load-plugins pylint_django"]
+    "python.sortImports.path": ""
 }
